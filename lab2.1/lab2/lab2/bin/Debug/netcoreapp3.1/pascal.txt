@@ -1,0 +1,1 @@
+if Event.command = cmCalcButton then ClearEvent(Event);

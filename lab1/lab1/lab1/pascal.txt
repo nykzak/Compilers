@@ -1,0 +1,24 @@
+procedure TEditor.DrawLines(Y, Count: Integer; LinePtr: Word); 
+var  Color: Word;  B: array[0..MaxLineLength - 1] of Word; 
+Begin  Color := GetColor($0201); 
+
+  while Count > 0 do 
+
+  Begin 
+
+    FormatLine(B, LinePtr, Delta.X + Size.X, color); 
+    WriteBuf(0, Y, Size.X, 1, B[Delta.X]); 
+
+    LinePtr := NextLine(LinePtr); 
+
+    Inc(Y); 
+
+    Dec(Count); 
+
+  End; 
+
+
+
+R := Operand * R / 100; 
+
+End; 
